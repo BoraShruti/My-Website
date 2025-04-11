@@ -1,0 +1,77 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+.scroll-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-section {
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.hero-header {
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* optional: darken overlay */
+    background-blend-mode: multiply;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* adjust based on your navbar height */
+}
+
+
+.badge:hover {
+    background-color: #f8f9fa;
+    cursor: default;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+/* Auto-scroll animation */
+@keyframes scroll-cards {
+    0% { scroll-left: 0; }
+    100% { scroll-left: 100%; }
+}
+
+.auto-scroll {
+    animation: auto-scroll 20s linear infinite;
+}
+
+/* Stop animation when hovered */
+.auto-scroll:hover {
+    animation-play-state: paused;
+}
+
+
+/* Arrows on sides */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: lightgray;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.left-arrow {
+    left: -20px;
+}
+
+.right-arrow {
+    right: -20px;
+}
+
+.scroll-section::-webkit-scrollbar {
+    height: 8px;
+}
+.scroll-section::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 10px;
+}
